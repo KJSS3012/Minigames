@@ -1,14 +1,16 @@
 package Characters;
 
 import Players.Player;
+import java.util.Random;
 
 public abstract class Character {
+    protected Random rd = new Random();
     private String name, passive;
     protected String[] skills;
     protected int[] staminaCost;
-    private float life, atkDamage, stamina, defense;
-    private boolean isStunned, isSilenced;
-
+    private double life, atkDamage, stamina, defense;
+    private boolean isStunned = false, isSilenced = false;
+    
     protected abstract void passive();
 
     protected abstract void skillOne(Player player);
@@ -51,35 +53,35 @@ public abstract class Character {
         this.staminaCost = staminaCost;
     }
 
-    public float getLife() {
+    public double getLife() {
         return life;
     }
 
-    public void setLife(float life) {
+    public void setLife(double life) {
         this.life = life;
     }
 
-    public float getAtkDamage() {
+    public double getAtkDamage() {
         return atkDamage;
     }
 
-    public void setAtkDamage(float atkDamage) {
+    public void setAtkDamage(double atkDamage) {
         this.atkDamage = atkDamage;
     }
 
-    public float getStamina() {
+    public double getStamina() {
         return stamina;
     }
 
-    public void setStamina(float stamina) {
+    public void setStamina(double stamina) {
         this.stamina = stamina;
     }
 
-    public float getDefense() {
+    public double getDefense() {
         return defense;
     }
 
-    public void setDefense(float defense) {
+    public void setDefense(double defense) {
         this.defense = defense;
     }
 
