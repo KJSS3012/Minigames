@@ -5,10 +5,9 @@ import Config.Description;
 public class Start {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        boolean reset = true, reset4;
         System.out.println("\n---SKILL COMBAT---");
-        boolean reset = false, reset4 = false;
         while (reset) {
-            reset = false;
             System.out.println("\n1 - Play\n2 - Character Description\n3 - Setings\n4 - Credit\n5 - Exit");
             int option = in.nextInt();
             switch (option) {
@@ -34,22 +33,21 @@ public class Start {
 
                     break;
                 case 4:
+                    reset4 = true;
                     while (reset4) {
                         System.out.println("\nAuthor: Kaique Santos\nGithub Account: KJSS3012\n");
-                        System.out.println("\n 1 - Back");
+                        System.out.println("\n 1 - Back\n");
                         option = in.nextInt();
                         switch (option) {
                             case 1:
-                                reset = true;
                                 reset4 = false;
                                 break;
                             default:
                                 System.out.println("\nInvalid Value");
-                                reset4 = true;
                                 break;
                         }
-                        break;
                     }
+                    break;
                 case 5:
                     System.out.println("Thanks for play");
                     System.exit(0);
@@ -57,7 +55,6 @@ public class Start {
 
                 default:
                     System.out.println("\nInvalid Value");
-                    reset = true;
                     break;
             }
         }
