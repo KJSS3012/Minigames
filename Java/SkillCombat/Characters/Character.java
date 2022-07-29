@@ -6,7 +6,7 @@ import java.util.Random;
 public abstract class Character {
     protected Random rd = new Random();
     private String name, passive;
-    protected String[] skills;
+    protected String[] skills, description;
     protected int[] staminaCost;
     private double life, atkDamage, stamina, defense;
     private boolean isStunned = false, isSilenced = false;
@@ -43,6 +43,14 @@ public abstract class Character {
 
     public void setSkills(String[] skills) {
         this.skills = skills;
+    }
+
+    public String[] getDescription() {
+        return description;
+    }
+
+    public void setDescription(String[] description) {
+        this.description = description;
     }
 
     public int[] getStaminaCost() {
@@ -100,5 +108,7 @@ public abstract class Character {
     public void setSilenced(boolean isSilenced) {
         this.isSilenced = isSilenced;
     }
+
+    
 
 }
