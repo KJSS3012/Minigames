@@ -17,15 +17,15 @@ public class Nicolly extends Character {
 
         // StaminaCost definition *
         staminaCost = new int[4];
-        staminaCost[0] = 30;
-        staminaCost[1] = 40;
+        staminaCost[0] = 50;
+        staminaCost[1] = 10;
         staminaCost[2] = 150;
         staminaCost[3] = 100;
 
         // Description definition
         description[0] = "Nicolly receive 20 armor and lose 10% atkdamage in the first round, but in the second round she receive 20 atkdamage and lose 20% armor";
         description[1] = "Nicolly throw the favorite book in the enemy dealing 20+15% atkdamage";
-        description[2] = "Nicolly have your friend beatriz to do her job, receiving 30 stamina";
+        description[2] = "Nicolly have your friend beatriz to do her job, receiving 50 stamina";
         description[3] = "Nicolly take out of her bag a bunch of meds, healing herself in 40 heal points";
         description[4] = "Nicolly spawn a cat with germs and dealing damage 20% in the max heal points of enemy";
 
@@ -39,7 +39,7 @@ public class Nicolly extends Character {
 
     @Override
     protected void passive() {
-        System.out.println("\nGym mouse passive activated, kaique got stronger");
+        System.out.println("\nInstability activated, Nicolly got stronger");
         setAtkDamage(getAtkDamage() + 10);
     }
 

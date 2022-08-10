@@ -23,9 +23,9 @@ public class JoaoVictor extends Character {
         staminaCost[3] = 100;
 
         // Description definition
-        description[0] = "Nicolly receive 20 armor and lose 10% atkdamage in the first round, but in the second round she receive 20 atkdamage and lose 20% armor";
-        description[1] = "Nicolly throw the favorite book in the enemy dealing 20+15% atkdamage";
-        description[2] = "Nicolly have your friend beatriz to do her job, receiving 30 stamina";
+        description[0] = "Jv regenerate 10 heal points per round, but if charlon is your enemy, he regenerate 15 heal points";
+        description[1] = "Jv goes into Defense Position and gains 10 armor and 5% reflected damage";
+        description[2] = "Jv obeys his mother and washes the dishes, gaining 5+67% armor";
         description[3] = "Jv speaks the hards truths and deal 5+60% atkdamage of true damage";
         description[4] = "God Vult bless Jv and give divine regeneration, Anarchy buffed in the 15%";
 
