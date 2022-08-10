@@ -15,4 +15,4 @@ Utilize os links na aba **"Índice"** para acessar os códigos e suas linguagens
 
 > Criação de um jogo da velha totalmente em Java
 
-<a href = "https://github.com/KJSS3012/Aulas/tree/main/Classe_Veiculo">![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)</a>
+<a href = "https://github.com/KJSS3012/Minigames/tree/main/Java/Tic-Tac-Toe">![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)</a>
