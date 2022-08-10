@@ -5,6 +5,7 @@ import Config.Description;
 public class Start {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        Description d = new Description();
         boolean reset = true, reset4;
         System.out.println("\n---SKILL COMBAT---");
         while (reset) {
@@ -16,14 +17,16 @@ public class Start {
                     break;
                 case 2:
                     System.out.println("\n---Character Description---");
-                    System.out.println("1 - Kaique");
+                    System.out.println("1 - Kaique\n2 - Nicolly");
                     option = in.nextInt();
                     switch (option) {
                         case 1:
-                            Description d = new Description();
                             Kaique k = new Kaique();
                             d.status(k);
                             break;
+                        case 2:
+                            Nicolly n = new Nicolly();
+                            d.status(n);
                         default:
                             System.out.println("\nInvalid Value");
                             break;
