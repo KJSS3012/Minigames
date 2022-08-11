@@ -30,8 +30,8 @@ public class Nicolly extends Character {
         setDefense(20);
 
         // Description definition
-        description[0] = "Nicolly receive 20 armor and lose 10% ("+0.1*getAtkDamage()+") atkdamage in the first round, but in the second round she receive 20 atkdamage and lose 20% ("+0.2*getDefense()+") armor";
-        description[1] = "Nicolly throw the favorite book in the enemy dealing 20+15% ("+20+(0.15*getAtkDamage())+") atkdamage";
+        description[0] = "Nicolly receive 20 armor and lose 10% ("+Math.round(0.1*getAtkDamage())+") atkdamage in the first round, but in the second round she receive 20 atkdamage and lose 20% ("+0.2*getDefense()+") armor";
+        description[1] = "Nicolly throw the favorite book in the enemy dealing 20+15% ("+Math.round(20+(0.15*getAtkDamage()))+") atkdamage";
         description[2] = "Nicolly have your friend beatriz to do her job, receiving 50 stamina";
         description[3] = "Nicolly take out of her bag a bunch of meds, healing herself in 40 heal points";
         description[4] = "Nicolly spawn a cat with germs and dealing damage 20% in the max heal points of enemy";

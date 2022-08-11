@@ -31,9 +31,9 @@ public class Kaique extends Character {
 
         // Description definition
         description[0] = "At the beginning of the round Kaique is in the \"pump\" and receives +3 attack";
-        description[1] = "Kaique attacks with his head dealing 10+20%+ (" +(10+(0.2*getAtkDamage()))+") atkdamage, has a 50% chance to stun";
-        description[2] = "Kaique makes jokes that offend minorities, whoever listens suffers 30+5% ("+30+(getAtkDamage()*0.05)+") of atkdamage";
-        description[3] = "Kaique isolates herself by gaining 40% ("+0.4*getDefense()+") armor and restoring 50% (50) of his stamina";
+        description[1] = "Kaique attacks with his head dealing 10+20%+ (" +Math.round((10+(0.2*getAtkDamage())))+") atkdamage, has a 50% chance to stun";
+        description[2] = "Kaique makes jokes that offend minorities, whoever listens suffers 30+5% ("+Math.round((30+(getAtkDamage()*0.05)))+") of atkdamage";
+        description[3] = "Kaique isolates herself by gaining 40% ("+Math.round((0.4*getDefense()))+") armor and restoring 50% (50) of his stamina";
         description[4] = "Kaique dons his hood and becomes more focused, gaining 20 atkdamage, 20 armor and recovering 40 stamina per round. Lasts 3 rounds";
     }
 
@@ -50,20 +50,20 @@ public class Kaique extends Character {
         if (chance == 0) {
             player.getCharacter().setStunned(true);
         }
-        player.getCharacter().setLife(player.getCharacter().getLife() - 10 + (0.2 * getAtkDamage()));
+        player.getCharacter().setLife(player.getCharacter().getLife() - Math.round(10 + (0.2 * getAtkDamage())));
     }
 
     @Override
     protected void skillTwo(Player player) {
         System.out.println("Kaique attacked with " + skills[1]);
-        player.getCharacter().setLife(player.getCharacter().getLife() - (30 + (0.05 * getAtkDamage())));
+        player.getCharacter().setLife(player.getCharacter().getLife() - Math.round(30 + (0.05 * getAtkDamage())));
     }
 
     @Override
     protected void skillThree(Player player) {
         System.out.println("Kaique attacked with " + skills[2]);
-        setDefense(getDefense() + (getDefense() * 0.4));
-        setStamina(getStamina() + (getStamina() * 0.5));
+        setDefense(Math.round(getDefense() + (getDefense() * 0.4)));
+        setStamina(Math.round(getStamina() + (getStamina() * 0.5)));
     }
 
     @Override

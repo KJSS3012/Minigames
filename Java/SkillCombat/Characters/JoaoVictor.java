@@ -32,8 +32,8 @@ public class JoaoVictor extends Character {
         // Description definition
         description[0] = "Jv regenerate 10 heal points per round, but if charlon is your enemy, he regenerate 15 heal points";
         description[1] = "Jv goes into Defense Position and gains 10 armor and 5% reflected damage";
-        description[2] = "Jv obeys his mother and washes the dishes, gaining 5+67% ("+(5+(0.67*getDefense()))+") armor";
-        description[3] = "Jv speaks the hards truths and deal 5+60% ("+(5+(0.6*getAtkDamage()))+") atkdamage of true damage";
+        description[2] = "Jv obeys his mother and washes the dishes, gaining 5+67% ("+Math.round((5+(0.67*getDefense())))+") armor";
+        description[3] = "Jv speaks the hards truths and deal 5+60% ("+Math.round((5+(0.6*getAtkDamage())))+") atkdamage of true damage";
         description[4] = "God Vult bless Jv and give divine regeneration, Anarchy buffed in the 15%";
     }
 
