@@ -51,12 +51,14 @@ public class Kaique extends Character {
             player.getCharacter().setStunned(true);
         }
         player.getCharacter().setLife(player.getCharacter().getLife() - Math.round(10 + (0.2 * getAtkDamage())));
+        setStamina(getStamina() - staminaCost[0]);
     }
 
     @Override
     protected void skillTwo(Player player) {
         System.out.println("Kaique attacked with " + skills[1]);
         player.getCharacter().setLife(player.getCharacter().getLife() - Math.round(30 + (0.05 * getAtkDamage())));
+        setStamina(getStamina() - staminaCost[1]);
     }
 
     @Override
@@ -64,6 +66,7 @@ public class Kaique extends Character {
         System.out.println("Kaique attacked with " + skills[2]);
         setDefense(Math.round(getDefense() + (getDefense() * 0.4)));
         setStamina(Math.round(getStamina() + (getStamina() * 0.5)));
+        setStamina(getStamina() - staminaCost[2]);
     }
 
     @Override
@@ -72,5 +75,6 @@ public class Kaique extends Character {
         setDefense(getDefense() + 20);
         setStamina(getStamina() + 40);
         setAtkDamage(getAtkDamage() + 20);
+        setStamina(getStamina() - staminaCost[3]);
     }
 }

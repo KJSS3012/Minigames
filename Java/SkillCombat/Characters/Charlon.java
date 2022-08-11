@@ -2,21 +2,18 @@ package Characters;
 
 import Players.Player;
 
-public class JoaoVictor extends Character {
+public class Charlon extends Character {
     
-    private double regeneration;
-    
-    public JoaoVictor() {
+    public Charlon() {
 
         // Skills definition
-        this.regeneration = 10;
         skills = new String[4];
         description = new String[5];
-        setPassive("Anarchy");
-        skills[0] = "Xenofobic";
-        skills[1] = "Whash Dish";
-        skills[2] = "Words of Truth";
-        skills[3] = "God Vult";
+        setPassive("Monarchy");
+        skills[0] = "Ghost of Communism";
+        skills[1] = "Division of Power";
+        skills[2] = "French Revolution";
+        skills[3] = "For Athen!";
 
         // StaminaCost definition *
         staminaCost = new int[4];
