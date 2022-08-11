@@ -9,7 +9,7 @@ public class Start {
         boolean reset = true, reset4;
         System.out.println("\n---SKILL COMBAT---");
         while (reset) {
-            System.out.println("\n1 - Play\n2 - Character Description\n3 - Setings\n4 - Credit\n5 - Exit");
+            System.out.println("\n1 - Play\n2 - Character Description\n3 - Settings\n4 - Credits\n5 - Exit");
             int option = in.nextInt();
             switch (option) {
                 case 1:
@@ -17,7 +17,7 @@ public class Start {
                     break;
                 case 2:
                     System.out.println("\n---Character Description---");
-                    System.out.println("1 - Kaique\n2 - Nicolly");
+                    System.out.println("1 - Kaique\n2 - Nicolly\n3 - João Victor");
                     option = in.nextInt();
                     switch (option) {
                         case 1:
@@ -27,6 +27,11 @@ public class Start {
                         case 2:
                             Nicolly n = new Nicolly();
                             d.status(n);
+                            break;
+                        case 3:
+                            JoaoVictor j = new JoaoVictor();
+                            d.status(j);
+                            break;
                         default:
                             System.out.println("\nInvalid Value");
                             break;

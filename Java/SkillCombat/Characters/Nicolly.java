@@ -22,19 +22,19 @@ public class Nicolly extends Character {
         staminaCost[2] = 150;
         staminaCost[3] = 100;
 
-        // Description definition
-        description[0] = "Nicolly receive 20 armor and lose 10% atkdamage in the first round, but in the second round she receive 20 atkdamage and lose 20% armor";
-        description[1] = "Nicolly throw the favorite book in the enemy dealing 20+15% atkdamage";
-        description[2] = "Nicolly have your friend beatriz to do her job, receiving 50 stamina";
-        description[3] = "Nicolly take out of her bag a bunch of meds, healing herself in 40 heal points";
-        description[4] = "Nicolly spawn a cat with germs and dealing damage 20% in the max heal points of enemy";
-
         // Status definition *
         setName("Nicolly");
         setLife(80);
         setAtkDamage(15);
         setStamina(200);
         setDefense(20);
+
+        // Description definition
+        description[0] = "Nicolly receive 20 armor and lose 10% ("+0.1*getAtkDamage()+") atkdamage in the first round, but in the second round she receive 20 atkdamage and lose 20% ("+0.2*getDefense()+") armor";
+        description[1] = "Nicolly throw the favorite book in the enemy dealing 20+15% ("+20+(0.15*getAtkDamage())+") atkdamage";
+        description[2] = "Nicolly have your friend beatriz to do her job, receiving 50 stamina";
+        description[3] = "Nicolly take out of her bag a bunch of meds, healing herself in 40 heal points";
+        description[4] = "Nicolly spawn a cat with germs and dealing damage 20% in the max heal points of enemy";
     }
 
     @Override

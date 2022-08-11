@@ -22,18 +22,19 @@ public class Kaique extends Character {
         staminaCost[2] = 10;
         staminaCost[3] = 80;
 
-        // Description definition
-        description[0] = "At the beginning of the round Kaique is in the \"pump\" and receives +3 attack";
-        description[1] = "Kaique attacks with his head dealing 10+20% atkdamage, has a 50% chance to stun";
-        description[2] = "Kaique makes jokes that offend minorities, whoever listens suffers 30+5% of atkdamage";
-        description[3] = "Kaique isolates herself by gaining 40% armor and restoring 50% of his stamina";
-        description[4] = "Kaique dons his hood and becomes more focused, gaining 20 atkdamage, 20 armor and recovering 40 stamina per round. Lasts 3 rounds";
         // Status definition
         setName("Kaique");
         setLife(100);
         setAtkDamage(10);
         setStamina(100);
         setDefense(10);
+
+        // Description definition
+        description[0] = "At the beginning of the round Kaique is in the \"pump\" and receives +3 attack";
+        description[1] = "Kaique attacks with his head dealing 10+20%+ (" +(10+(0.2*getAtkDamage()))+") atkdamage, has a 50% chance to stun";
+        description[2] = "Kaique makes jokes that offend minorities, whoever listens suffers 30+5% ("+30+(getAtkDamage()*0.05)+") of atkdamage";
+        description[3] = "Kaique isolates herself by gaining 40% ("+0.4*getDefense()+") armor and restoring 50% (50) of his stamina";
+        description[4] = "Kaique dons his hood and becomes more focused, gaining 20 atkdamage, 20 armor and recovering 40 stamina per round. Lasts 3 rounds";
     }
 
     @Override
