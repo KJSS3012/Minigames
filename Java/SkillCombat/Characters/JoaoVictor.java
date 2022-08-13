@@ -39,13 +39,13 @@ public class JoaoVictor extends Character {
     }
 
     @Override
-    protected void passive() {
+    public void passive() {
         System.out.println("\nAnarchy passive activated, Jv regenerate 10 life points");
         setLife(getLife()+getRegeneration());
     }
 
     @Override
-    protected void skillOne(Player player) {
+    public void skillOne(Player player) {
         System.out.println("Jv attacked with " + skills[0]);
         setDefense(getDefense()+10);
         //reflect damage
@@ -53,21 +53,21 @@ public class JoaoVictor extends Character {
     }
 
     @Override
-    protected void skillTwo(Player player) {
+    public void skillTwo(Player player) {
         System.out.println("Jv attacked with " + skills[1]);
         setDefense(getDefense()+Math.round((2+(0.2*40))));
         setStamina(getStamina() - staminaCost[1]);
     }
 
     @Override
-    protected void skillThree(Player player) {
+    public void skillThree(Player player) {
         System.out.println("Jv attacked with " + skills[2]);
         player.getCharacter().setLife(player.getCharacter().getLife()-Math.round((2+(0.6*getAtkDamage()))));
         setStamina(getStamina() - staminaCost[2]);
     }
 
     @Override
-    protected void skillFour(Player player) {
+    public void skillFour(Player player) {
         System.out.println("Jv attacked with " + skills[3]);
         setRegeneration(12);;
         System.out.println("\nAnarchy was blessed");

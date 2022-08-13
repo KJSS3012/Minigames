@@ -38,23 +38,23 @@ public class Charlon extends Character {
     }
 
     @Override
-    protected void passive() {
+    public void passive() {
         System.out.println("\nAnarchy passive activated, Jv regenerate 10 life points");
     }
 
     @Override
-    protected void skillOne(Player player) {
+    public void skillOne(Player player) {
     }
 
     @Override
-    protected void skillTwo(Player player) {
+    public void skillTwo(Player player) {
     }
 
     @Override
-    protected void skillThree(Player player) {
+    public void skillThree(Player player) {
     }
 
     @Override
-    protected void skillFour(Player player) {
+    public void skillFour(Player player) {
     }
 }

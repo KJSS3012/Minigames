@@ -38,34 +38,34 @@ public class Nicolly extends Character {
     }
 
     @Override
-    protected void passive() {
+    public void passive() {
         System.out.println("\nInstability activated, Nicolly got stronger");
         setAtkDamage(getAtkDamage() + 10);
     }
 
     @Override
-    protected void skillOne(Player player) {
+    public void skillOne(Player player) {
         System.out.println("Nicolly attacked with " + skills[0]);
         player.getCharacter().setLife(player.getCharacter().getLife() - Math.round(20+(0.15*getAtkDamage())));
         setStamina(getStamina() - staminaCost[0]);
     }
 
     @Override
-    protected void skillTwo(Player player) {
+    public void skillTwo(Player player) {
         System.out.println("Nicolly attacked with " + skills[1]);
         setStamina(getStamina()+50);
         setStamina(getStamina() - staminaCost[1]);
     }
 
     @Override
-    protected void skillThree(Player player) {
+    public void skillThree(Player player) {
         System.out.println("Nicolly attacked with " + skills[2]);
         setLife(getLife()+40);
         setStamina(getStamina() - staminaCost[2]);
     }
 
     @Override
-    protected void skillFour(Player player) {
+    public void skillFour(Player player) {
         System.out.println("Nicolly attacked with " + skills[3]);
         player.getCharacter().setLife(player.getCharacter().getLife() - (0.2*player.getCharacter().getLife()));
         setStamina(getStamina() - staminaCost[3]);

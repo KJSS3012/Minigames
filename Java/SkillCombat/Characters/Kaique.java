@@ -38,13 +38,13 @@ public class Kaique extends Character {
     }
 
     @Override
-    protected void passive() {
+    public void passive() {
         System.out.println("\nGym mouse passive activated, Kaique got stronger");
         setAtkDamage(getAtkDamage() + 3);
     }
 
     @Override
-    protected void skillOne(Player player) {
+    public void skillOne(Player player) {
         System.out.println("Kaique attacked with " + skills[0]);
         int chance = rd.nextInt(2);
         if (chance == 0) {
@@ -55,14 +55,14 @@ public class Kaique extends Character {
     }
 
     @Override
-    protected void skillTwo(Player player) {
+    public void skillTwo(Player player) {
         System.out.println("Kaique attacked with " + skills[1]);
         player.getCharacter().setLife(player.getCharacter().getLife() - Math.round(30 + (0.05 * getAtkDamage())));
         setStamina(getStamina() - staminaCost[1]);
     }
 
     @Override
-    protected void skillThree(Player player) {
+    public void skillThree(Player player) {
         System.out.println("Kaique attacked with " + skills[2]);
         setDefense(Math.round(getDefense() + (getDefense() * 0.4)));
         setStamina(Math.round(getStamina() + (getStamina() * 0.5)));
@@ -70,7 +70,7 @@ public class Kaique extends Character {
     }
 
     @Override
-    protected void skillFour(Player player) {
+    public void skillFour(Player player) {
         System.out.println("Kaique attacked with " + skills[3]);
         setDefense(getDefense() + 20);
         setStamina(getStamina() + 40);

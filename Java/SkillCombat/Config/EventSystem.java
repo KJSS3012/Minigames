@@ -8,43 +8,46 @@ public class EventSystem {
     Scanner in = new Scanner(System.in);
     InstanceCharacter instance = new InstanceCharacter();
     private int rounds = 1;
-    private boolean isRound = false, isRepeat;
+    private boolean isRound = rounds%2==0, isRepeat;
 
     public void gameStart(Player playerOne, Player playerTwo) {
         choseCharacter(playerOne);
         choseCharacter(playerTwo);
-        battle(playerOne);
+        battle(playerOne, playerTwo);
+        battle(playerTwo, playerOne);
     }
 
-    public void battle(Player player) {
-        menuGame(player);
+    public void battle(Player attacker, Player defender) {
+        menuGame(attacker);
         System.out.print("\nChoose your move");
         int choice = in.nextInt();
         isRepeat = true;
         do {
-
             switch (choice) {
                 case 1:
+                attacker.getCharacter().skillOne(defender);
+                    rounds += 1;
                     break;
                 case 2:
-
+                attacker.getCharacter().skillTwo(defender);
+                    rounds += 1;
                     break;
                 case 3:
-
+                attacker.getCharacter().skillThree(defender);
+                    rounds += 1;
                     break;
                 case 4:
-
+                attacker.getCharacter().skillFour(defender);
+                    rounds += 1;
                     break;
                 case 5:
-
+                    rounds += 1;
                     break;
-
                 default:
                     System.out.println("Invalid value");
                     break;
             }
         } while (isRepeat);
-
     }
 
     public void choseCharacter(Player player) {
@@ -66,7 +69,6 @@ public class EventSystem {
                 break;
         }
     }
-
     public void menuGame(Player player) {
         System.out.println("\n----------SKILL COMBAT----------");
         System.out.print("\n"+player.getName()+" turn");
