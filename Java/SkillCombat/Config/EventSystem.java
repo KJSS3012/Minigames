@@ -8,13 +8,18 @@ public class EventSystem {
     Scanner in = new Scanner(System.in);
     InstanceCharacter instance = new InstanceCharacter();
     private int rounds = 1;
-    private boolean isRound = rounds % 2 == 0, isRepeat;
+    private boolean isRound = rounds % 2 == 0, isContinue = false;
 
     public void gameStart(Player playerOne, Player playerTwo) {
-        choseCharacter(playerOne);
-        choseCharacter(playerTwo);
-        battle(playerOne, playerTwo);
-        battle(playerTwo, playerOne);
+        do {
+        rounds = 1;
+            choseCharacter(playerOne);
+            choseCharacter(playerTwo);
+            do {
+                battle(playerOne, playerTwo);
+                battle(playerTwo, playerOne);
+            } while (playerOne.getCharacter().getLife() > 0 && playerTwo.getCharacter().getLife() > 0);
+        } while (isContinue);
     }
 
     public void choseCharacter(Player player) {
@@ -39,9 +44,10 @@ public class EventSystem {
 
     public void battle(Player attacker, Player defender) {
         menuGame(attacker);
+        boolean isRepeat;
         isRepeat = true;
         do {
-            System.out.print("\nChoose your move");
+            System.out.print("\nChoose your move: ");
             int choice = in.nextInt();
             switch (choice) {
                 case 1:
@@ -90,10 +96,29 @@ public class EventSystem {
         }
     }
 
-    public void gameOver(Player winner){
-        
+    public void gameOver(Player winner) {
+        int choice;
+        System.out.println("\n" + winner.getName() + " win");
+        do {
+            System.out.println("Continue?\n1 - Yes\n2 - No");
+            choice = in.nextInt();
+            switch (choice) {
+                case 1:
+                    isContinue = true;
+                    break;
+                case 2:
+                    isContinue = false;
+                    break;
+                default:
+
+                    break;
+            }
+        } while (choice != 1 && choice != 2);
     }
-    
+
+    public void resetCharacter(Player player){
+    }
+
     public void menuGame(Player player) {
         System.out.println("\n----------SKILL COMBAT----------");
         System.out.print("\n"+player.getName()+" turn");
@@ -109,7 +134,6 @@ public class EventSystem {
         System.out.print("4 - ["+player.getCharacter().getSkills()[3]+"] "+"["+player.getCharacter().getStaminaCost()[3]+"]\n");
         System.out.print("5 - Skip the round\n");
     }
-
     public boolean isRound() {
         return isRound;
     }

@@ -11,15 +11,15 @@ public abstract class Character {
     private double life, atkDamage, stamina, defense, regeneration;
     private boolean isStunned = false, isSilenced = false;
     
-    public  void passive(){}
+    public abstract void passive();
 
-    public  void skillOne(Player player){}
+    public abstract void skillOne(Player player);
 
-    public  void skillTwo(Player player){}
+    public abstract void skillTwo(Player player);
 
-    public  void skillThree(Player player){}
+    public abstract void skillThree(Player player);
 
-    public  void skillFour(Player player){}
+    public abstract void skillFour(Player player);
 
     public String getName() {
         return name;
