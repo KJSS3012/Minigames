@@ -1,12 +1,12 @@
 package Config;
 
 import java.util.Scanner;
-import Characters.*;
 import Players.Player;
 
 public class EventSystem {
     
     Scanner in = new Scanner(System.in);
+    InstanceCharacter instance = new InstanceCharacter();
     private int rounds = 1;
     private boolean isRound = false;
 
@@ -27,16 +27,13 @@ public class EventSystem {
         int choice = in.nextInt();
         switch (choice) {
             case 1:
-                Kaique k = new Kaique();
-                player.setCharacter(k);
+                player.setCharacter(instance.kaique());
                 break;
             case 2:
-                Nicolly n = new Nicolly();
-                player.setCharacter(n);
+                player.setCharacter(instance.nicolly());
                 break;
             case 3:
-                JoaoVictor j = new JoaoVictor();
-                player.setCharacter(j);
+                player.setCharacter(instance.joaoVictor());
                 break;
             default:
                 System.out.println("Invalid value");
@@ -45,13 +42,14 @@ public class EventSystem {
     }
 
     public void menuGame(Player player) {
+        System.out.println("\n----------SKILL COMBAT----------");
         System.out.print("\n"+player.getName()+" turn");
-        System.out.print(" |Round: "+rounds);
-        System.out.print("\n|"+player.getCharacter().getName()+" |");
-        System.out.print(" Life:"+player.getCharacter().getLife()+" |");
+        System.out.print(" |Round: "+rounds+"\n");
+        System.out.print("\n|"+player.getCharacter().getName()+"|\n");
+        System.out.print(" \nLife:"+player.getCharacter().getLife()+" |");
         System.out.print(" Atk:"+player.getCharacter().getAtkDamage()+" |");
         System.out.print(" Def:"+player.getCharacter().getDefense()+" |");
-        System.out.print(" Stam"+player.getCharacter().getStamina()+" |\n");
+        System.out.print(" Stam"+player.getCharacter().getStamina()+"\n");
         System.out.print("1 - ["+player.getCharacter().getSkills()[0]+"] "+"["+player.getCharacter().getStaminaCost()[0]+"]  ");
         System.out.print("2 - ["+player.getCharacter().getSkills()[1]+"] "+"["+player.getCharacter().getStaminaCost()[1]+"]"+"\n");
         System.out.print("3 - ["+player.getCharacter().getSkills()[2]+"] "+"["+player.getCharacter().getStaminaCost()[2]+"]  ");

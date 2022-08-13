@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import Characters.*;
 import Config.*;
 import Players.Player;
 
@@ -7,6 +6,7 @@ public class Start {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         Description d = new Description();
+        InstanceCharacter instance = new InstanceCharacter();
         boolean reset = true, reset4;
         System.out.println("\n---SKILL COMBAT---");
         while (reset) {
@@ -32,20 +32,16 @@ public class Start {
                     option = in.nextInt();
                     switch (option) {
                         case 1:
-                            Kaique k = new Kaique();
-                            d.status(k);
+                            d.status(instance.kaique());
                             break;
                         case 2:
-                            Nicolly n = new Nicolly();
-                            d.status(n);
+                            d.status(instance.nicolly());
                             break;
                         case 3:
-                            JoaoVictor j = new JoaoVictor();
-                            d.status(j);
+                            d.status(instance.joaoVictor());
                             break;
                         case 4:
-                            Charlon c = new Charlon();
-                            d.status(c);
+                            d.status(instance.charlon());
                             break;
                         default:
                             System.out.println("\nInvalid Value");
