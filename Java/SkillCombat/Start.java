@@ -18,12 +18,11 @@ public class Start {
                     Player playerTwo = new Player();
                     System.out.println("\nHello! Skill Combat is starting");
                     in.nextLine();
-                    System.out.print("How should i call you, Player one? ");
+                    System.out.print("\nHow should i call you, Player one? ");
                     playerOne.setName(in.nextLine());
                     System.out.print("\nHow should i call you, Player Two? ");
                     playerTwo.setName(in.nextLine());
                     EventSystem e = new EventSystem();
-                    reset = false;
                     e.gameStart(playerOne,playerTwo);
                     break;
                 case 2:
@@ -49,7 +48,7 @@ public class Start {
                     }
                     break;
                 case 3:
-
+                    System.out.println("\nComing soon");
                     break;
                 case 4:
                     reset4 = true;
@@ -68,7 +67,7 @@ public class Start {
                     }
                     break;
                 case 5:
-                    System.out.println("Thanks for play");
+                    System.out.println("\nThanks for play");
                     System.exit(0);
                     break;
 

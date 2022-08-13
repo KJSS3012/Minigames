@@ -4,20 +4,46 @@ import java.util.Scanner;
 import Players.Player;
 
 public class EventSystem {
-    
+
     Scanner in = new Scanner(System.in);
     InstanceCharacter instance = new InstanceCharacter();
     private int rounds = 1;
-    private boolean isRound = false;
+    private boolean isRound = false, isRepeat;
 
     public void gameStart(Player playerOne, Player playerTwo) {
         choseCharacter(playerOne);
         choseCharacter(playerTwo);
-        menuGame(playerOne);
-        menuGame(playerTwo);
+        battle(playerOne);
     }
 
-    public void battle() {
+    public void battle(Player player) {
+        menuGame(player);
+        System.out.print("\nChoose your move");
+        int choice = in.nextInt();
+        isRepeat = true;
+        do {
+
+            switch (choice) {
+                case 1:
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
+                case 5:
+
+                    break;
+
+                default:
+                    System.out.println("Invalid value");
+                    break;
+            }
+        } while (isRepeat);
 
     }
 
@@ -54,5 +80,6 @@ public class EventSystem {
         System.out.print("2 - ["+player.getCharacter().getSkills()[1]+"] "+"["+player.getCharacter().getStaminaCost()[1]+"]"+"\n");
         System.out.print("3 - ["+player.getCharacter().getSkills()[2]+"] "+"["+player.getCharacter().getStaminaCost()[2]+"]  ");
         System.out.print("4 - ["+player.getCharacter().getSkills()[3]+"] "+"["+player.getCharacter().getStaminaCost()[3]+"]\n");
+        System.out.print("5 - Skip the round\n");
     }
 }
