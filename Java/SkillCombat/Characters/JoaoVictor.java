@@ -28,10 +28,10 @@ public class JoaoVictor extends Character {
         setAtkDamage(6);
         setStamina(100);
         setDefense(40);
-        setRegeneration(10);
+        setRegeneration(4);
 
         // Description definition
-        description[0] = "Jv regenerate 10 life points per round, but if charlon is your enemy, he regenerate 15 heal points";
+        description[0] = "Jv regenerate 4 life points per round, but if charlon is your enemy, he regenerate 8 heal points";
         description[1] = "Jv goes into Defense Position and gains 10 armor and 5% reflected damage";
         description[2] = "Jv obeys his mother and washes the dishes, gaining 2+20% ("+Math.round((2+(0.2*40)))+") armor";
         description[3] = "Jv speaks the hards truths and deal 2+60% ("+Math.round((2+(0.6*getAtkDamage())))+") atkdamage of true damage";

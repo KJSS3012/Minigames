@@ -11,6 +11,7 @@ public class Start {
         System.out.println("\n---SKILL COMBAT---");
         while (reset) {
             System.out.println("\n1 - Play\n2 - Character Description\n3 - Settings\n4 - Credits\n5 - Exit");
+            System.out.print("\nChoice: ");
             int option = in.nextInt();
             switch (option) {
                 case 1:
@@ -18,9 +19,9 @@ public class Start {
                     Player playerTwo = new Player();
                     System.out.println("\nHello! Skill Combat is starting");
                     in.nextLine();
-                    System.out.print("\nHow should i call you, Player one? ");
+                    System.out.print("\nHow should i call you, Player one? Name: ");
                     playerOne.setName(in.nextLine());
-                    System.out.print("\nHow should i call you, Player Two? ");
+                    System.out.print("\nHow should i call you, Player Two? Name: ");
                     playerTwo.setName(in.nextLine());
                     EventSystem e = new EventSystem();
                     e.gameStart(playerOne,playerTwo);

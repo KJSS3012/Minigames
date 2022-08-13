@@ -19,7 +19,7 @@ public class Kaique extends Character {
         staminaCost = new int[4];
         staminaCost[0] = 30;
         staminaCost[1] = 40;
-        staminaCost[2] = 10;
+        staminaCost[2] = 5;
         staminaCost[3] = 80;
 
         // Status definition
@@ -45,7 +45,7 @@ public class Kaique extends Character {
 
     @Override
     public void skillOne(Player player) {
-        System.out.println("Kaique attacked with " + skills[0]);
+        System.out.println("\nKaique attacked with " + skills[0]);
         int chance = rd.nextInt(2);
         if (chance == 0) {
             player.getCharacter().setStunned(true);
@@ -56,14 +56,14 @@ public class Kaique extends Character {
 
     @Override
     public void skillTwo(Player player) {
-        System.out.println("Kaique attacked with " + skills[1]);
+        System.out.println("\nKaique attacked with " + skills[1]);
         player.getCharacter().setLife(player.getCharacter().getLife() - Math.round(30 + (0.05 * getAtkDamage())));
         setStamina(getStamina() - staminaCost[1]);
     }
 
     @Override
     public void skillThree(Player player) {
-        System.out.println("Kaique attacked with " + skills[2]);
+        System.out.println("\nKaique attacked with " + skills[2]);
         setDefense(Math.round(getDefense() + (getDefense() * 0.4)));
         setStamina(Math.round(getStamina() + (getStamina() * 0.5)));
         setStamina(getStamina() - staminaCost[2]);
@@ -71,7 +71,7 @@ public class Kaique extends Character {
 
     @Override
     public void skillFour(Player player) {
-        System.out.println("Kaique attacked with " + skills[3]);
+        System.out.println("\nKaique attacked with " + skills[3]);
         setDefense(getDefense() + 20);
         setStamina(getStamina() + 40);
         setAtkDamage(getAtkDamage() + 20);
