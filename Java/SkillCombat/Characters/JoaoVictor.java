@@ -4,12 +4,9 @@ import Players.Player;
 
 public class JoaoVictor extends Character {
     
-    private double regeneration;
-    
     public JoaoVictor() {
 
         // Skills definition
-        this.regeneration = 10;
         skills = new String[4];
         description = new String[5];
         setPassive("Anarchy");
@@ -31,6 +28,7 @@ public class JoaoVictor extends Character {
         setAtkDamage(6);
         setStamina(100);
         setDefense(40);
+        setRegeneration(10);
 
         // Description definition
         description[0] = "Jv regenerate 10 life points per round, but if charlon is your enemy, he regenerate 15 heal points";
@@ -43,7 +41,7 @@ public class JoaoVictor extends Character {
     @Override
     protected void passive() {
         System.out.println("\nAnarchy passive activated, Jv regenerate 10 life points");
-        setLife(getLife()+regeneration);
+        setLife(getLife()+getRegeneration());
     }
 
     @Override
@@ -71,7 +69,7 @@ public class JoaoVictor extends Character {
     @Override
     protected void skillFour(Player player) {
         System.out.println("Jv attacked with " + skills[3]);
-        regeneration += 12;
+        setRegeneration(12);;
         System.out.println("\nAnarchy was blessed");
         setStamina(getStamina() - staminaCost[3]);
     }

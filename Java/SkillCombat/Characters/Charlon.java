@@ -9,7 +9,7 @@ public class Charlon extends Character {
         // Skills definition
         skills = new String[4];
         description = new String[5];
-        setPassive("Monarchy");
+        setPassive("Ressurrection of Monarchy");
         skills[0] = "Ghost of Communism";
         skills[1] = "Division of Power";
         skills[2] = "French Revolution";
@@ -23,11 +23,11 @@ public class Charlon extends Character {
         staminaCost[3] = 100;
 
         // Status definition *
-        setName("João Victor");
-        setLife(130);
-        setAtkDamage(6);
+        setName("Charlon");
+        setLife(110);
+        setAtkDamage(12);
         setStamina(100);
-        setDefense(40);
+        setDefense(15);
 
         // Description definition
         description[0] = "Jv regenerate 10 life points per round, but if charlon is your enemy, he regenerate 15 heal points";
@@ -40,36 +40,21 @@ public class Charlon extends Character {
     @Override
     protected void passive() {
         System.out.println("\nAnarchy passive activated, Jv regenerate 10 life points");
-        setLife(getLife()+regeneration);
     }
 
     @Override
     protected void skillOne(Player player) {
-        System.out.println("Jv attacked with " + skills[0]);
-        setDefense(getDefense()+10);
-        //reflect damage
-        setStamina(getStamina() - staminaCost[0]);
     }
 
     @Override
     protected void skillTwo(Player player) {
-        System.out.println("Jv attacked with " + skills[1]);
-        setDefense(getDefense()+Math.round((2+(0.2*40))));
-        setStamina(getStamina() - staminaCost[1]);
     }
 
     @Override
     protected void skillThree(Player player) {
-        System.out.println("Jv attacked with " + skills[2]);
-        player.getCharacter().setLife(player.getCharacter().getLife()-Math.round((2+(0.6*getAtkDamage()))));
-        setStamina(getStamina() - staminaCost[2]);
     }
 
     @Override
     protected void skillFour(Player player) {
-        System.out.println("Jv attacked with " + skills[3]);
-        regeneration += 12;
-        System.out.println("\nAnarchy was blessed");
-        setStamina(getStamina() - staminaCost[3]);
     }
 }

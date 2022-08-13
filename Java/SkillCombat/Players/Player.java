@@ -7,6 +7,10 @@ public class Player {
     private int score;
     private String name;
 
+    public void registerPlayer(Player player) {
+        
+    }
+
     public Character getCharacter() {
         return character;
     }

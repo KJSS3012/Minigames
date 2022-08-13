@@ -8,7 +8,7 @@ public abstract class Character {
     private String name, passive;
     protected String[] skills, description;
     protected int[] staminaCost;
-    private double life, atkDamage, stamina, defense;
+    private double life, atkDamage, stamina, defense, regeneration;
     private boolean isStunned = false, isSilenced = false;
     
     protected abstract void passive();
@@ -47,7 +47,7 @@ public abstract class Character {
 
     public String[] getDescription() {
         return description;
-    }
+    }   
 
     public void setDescription(String[] description) {
         this.description = description;
@@ -109,6 +109,12 @@ public abstract class Character {
         this.isSilenced = isSilenced;
     }
 
-    
+    public double getRegeneration() {
+        return regeneration;
+    }
+
+    public void setRegeneration(double regeneration) {
+        this.regeneration = regeneration;
+    }
 
 }
