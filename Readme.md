@@ -110,7 +110,6 @@ Utilize os links na aba **"Índice"** para acessar os códigos e suas linguagens
 | Life   | Atk Damage   |    Defense    | Stamina |
 | :---:  |    :----:    |     :----:    |  :----: |
 |   100  |      10      |       10      |   100   |
-
 </p>
 
 
