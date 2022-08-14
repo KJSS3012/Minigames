@@ -48,7 +48,7 @@ Utilize os links na aba **"Índice"** para acessar os códigos e suas linguagens
 > Acessa as configurações do jogo (Coming soon)
 ####  4. Credits:
 > Acessa as informações sobre o criador do projeto
-####  5. Credits: 
+####  5. Exit: 
 > Encerra o jogo
 
 </br>
