@@ -34,7 +34,7 @@ Utilize os links na aba **"Índice"** para acessar os códigos e suas linguagens
 #### - [Conceitos-Habilidades](#Conceitos-Habilidades)
 #### - [Conceitos-Porcentagens](#Conceitos-Porcentagens)
 #### - [Personagens](#Personagens)
-#### [Kaique](####Kaique)
+#### [Kaique](#Kaique)
 
 </br>
 
