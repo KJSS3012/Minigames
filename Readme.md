@@ -29,12 +29,12 @@ Utilize os links na aba **"Índice"** para acessar os códigos e suas linguagens
 <a href = "https://github.com/KJSS3012/Minigames/tree/main/Java/SkillCombat">![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)</a>
 
 ### Instruções:
-##### - [Opções](#Opções)
-##### - [Conceitos-Atributos](#Conceitos-Atributos)
-##### - [Conceitos-Habilidades](#Conceitos-Habilidades)
-##### - [Conceitos-Porcentagens](#Conceitos-Porcentagens)
-##### - [Personagens](#Personagens)
-* ##### [Kaique](#Kaique)
+#### - [Opções](#Opções)
+#### - [Conceitos-Atributos](#Conceitos-Atributos)
+#### - [Conceitos-Habilidades](#Conceitos-Habilidades)
+#### - [Conceitos-Porcentagens](#Conceitos-Porcentagens)
+#### - [Personagens](#Personagens)
+#### [Kaique](####Kaique)
 
 </br>
 
