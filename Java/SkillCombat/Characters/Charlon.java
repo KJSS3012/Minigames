@@ -57,4 +57,11 @@ public class Charlon extends Character {
     @Override
     public void skillFour(Player player) {
     }
+
+    public void reset(){
+        setLife(110);
+        setAtkDamage(12);
+        setStamina(100);
+        setDefense(15);
+    }
 }

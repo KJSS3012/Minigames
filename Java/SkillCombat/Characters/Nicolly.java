@@ -70,4 +70,11 @@ public class Nicolly extends Character {
         player.getCharacter().setLife(player.getCharacter().getLife() - (0.2*player.getCharacter().getLife()));
         setStamina(getStamina() - staminaCost[3]);
     }
+
+    public void reset(){
+        setLife(80);
+        setAtkDamage(15);
+        setStamina(200);
+        setDefense(20);
+    }
 }

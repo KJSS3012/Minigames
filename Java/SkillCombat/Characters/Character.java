@@ -21,6 +21,8 @@ public abstract class Character {
 
     public abstract void skillFour(Player player);
 
+    public abstract void reset();
+
     public String getName() {
         return name;
     }

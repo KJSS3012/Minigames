@@ -73,4 +73,12 @@ public class JoaoVictor extends Character {
         System.out.println("\nAnarchy was blessed");
         setStamina(getStamina() - staminaCost[3]);
     }
+
+    public void reset(){
+        setLife(130);
+        setAtkDamage(6);
+        setStamina(100);
+        setDefense(40);
+        setRegeneration(4);
+    }
 }

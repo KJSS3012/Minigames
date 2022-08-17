@@ -77,4 +77,11 @@ public class Kaique extends Character {
         setAtkDamage(getAtkDamage() + 20);
         setStamina(getStamina() - staminaCost[3]);
     }
+
+    public void reset(){
+        setLife(100);
+        setAtkDamage(10);
+        setStamina(100);
+        setDefense(10);
+    }
 }
