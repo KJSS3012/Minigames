@@ -48,7 +48,7 @@ Utilize os links na aba **"Índice"** para acessar os códigos e suas linguagens
 > Acessa as configurações do jogo (Coming soon)
 ####  4. Credits:
 > Acessa as informações sobre o criador do projeto
-####  5. Credits: 
+####  5. Exit: 
 > Encerra o jogo
 
 </br>
@@ -62,6 +62,7 @@ Utilize os links na aba **"Índice"** para acessar os códigos e suas linguagens
 > **Defesa do personagem:** Influência no dano sofrido pelo oponente
 ####  4. Stamina: 
 > **Energia:** Ela é consumida para utilizar as skills.
+
 > Exemplo: Se a habilidade custa 50 de stamina e você só tem 30, não poderá usar a habilidade.
 ####  5. Stunned: 
 > **Atordoado:** O inimigo fica atordoado e não pode atacar na vez dele.
